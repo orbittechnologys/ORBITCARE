@@ -6,7 +6,7 @@ import img3 from "../assets/download (2).png";
 import { RiArrowDownSFill } from "react-icons/ri";
 import HospitalRevenue from "../components/HospitalRevenue";
 import PatientChart from "../components/PatientChart";
-import AppointmentChart from "../components/AppointmentChart";
+import AppointmentChart from "../components/Appointment";
 
 const Dashboard = () => {
   return (

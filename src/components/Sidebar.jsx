@@ -129,7 +129,7 @@ const Sidebar = () => {
           </div>
           <li>
             <a
-              href="#"
+              href="/"
               className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group"
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
@@ -141,7 +141,7 @@ const Sidebar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/doctor"
               className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">

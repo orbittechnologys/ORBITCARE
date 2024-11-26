@@ -3,6 +3,8 @@ import Aside from './assets/Components/Aside';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Layout from './components/Layout';
+import Dashboard from './pages/Dashboard';
+import Doctors from './pages/Doctors';
 
 function App() {
   
@@ -12,8 +14,8 @@ function App() {
       <Routes>
         
         <Route element={<Layout/>}>
-            <Route path='/' element={<h1>Home page</h1>}/>
-            <Route path='/doctor' element={<h1>Doctor page</h1>}/>
+            <Route path='/' element={<Dashboard/>}/>
+            <Route path='/doctor' element={<Doctors/>}/>
             <Route path='/appointment' element={<h1>Appointment page</h1>}/>
             <Route path='/patients' element={<h1>Patients page</h1>}/>
             <Route path='/staff' element={<h1>Staff page</h1>}/>
