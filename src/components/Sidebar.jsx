@@ -23,6 +23,7 @@ import { IoEarth } from "react-icons/io5";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { MdSettings } from "react-icons/md";
 import { MdPowerSettingsNew } from "react-icons/md";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Sidebar = () => {
 
@@ -31,6 +32,35 @@ const Sidebar = () => {
     const handleDropdownClick = () => {
        setIsDropdownClicked(!isDropdownClicked);
     }
+
+    const [isDoctorDropdownClicked,setIsDoctorDropdownClicked] = useState(false);
+
+    const handleDoctorDropdownClick = () => {
+      setIsDoctorDropdownClicked(!isDoctorDropdownClicked);
+    }
+
+
+
+    const [isPatientDropdownClicked,setIsPatientDropdownClicked] = useState(false);
+
+    const handlePatientDropdownClick = () => {
+       setIsPatientDropdownClicked(!isPatientDropdownClicked);
+    }
+
+
+    const [isRoomDropdownClicked,setIsRoomDropdownClicked] = useState(false);
+
+    const handleRoomDropdownClick = () => {
+       setIsRoomDropdownClicked(!isRoomDropdownClicked);
+    }
+
+    const [isPaymentsDropdownClicked,setIsPaymentsDropdownClicked] = useState(false);
+
+    const handlePaymentsDropdownClick = () => {
+       setIsPaymentsDropdownClicked(!isPaymentsDropdownClicked);
+    }
+
+
 
   return (
     <div>
@@ -80,43 +110,43 @@ const Sidebar = () => {
             >
               <img src={user} className="rounded-full w-10 h-10" />
               <div className="  text-left">
-                <h1 className="text-gray-400 font-sans ml-1 text-xl">
+                <h1 className="text-gray-400 font-sans  text-xl">
                   Welcome
                 </h1>
 
-                 <button className="flex justify-between w-full" onClick={handleDropdownClick}>
+                 <button className="flex justify-between font-semibold w-full text-gray-700" onClick={handleDropdownClick}>
                     Dr Alan Green
                     <span className="ml-2">
-                       v
+                    <IoMdArrowDropdown className='text-gray-500 mt-2' />
                     </span>
                  </button>
                  
               </div>
             </a>
             {isDropdownClicked && (
-                    <div className="text-gray-500 space-y-8 border rounded-md py-4 w-40 items-center ml-8 h-auto  shadow-xl z-10 ">
-                       <div className="flex justify-center hover:text-black">
+                    <div className="text-gray-500 space-y-6 border rounded-md py-4 w-40 items-center ml-8 h-64 shadow-xl z-10 ">
+                       <div className="flex justify-center item-center gap-1 hover:text-black">
                        <User className="hover:fill-black"/>
                        
-                      <h1 className="hover:text-black text-gray-400">My Profile</h1> 
+                      <h1 className="hover:text-black text-start text-gray-400">My Profile</h1> 
                       </div>
 
-                      <div className="flex justify-center hover:text-black">
+                      <div className="flex justify-center item-center gap-2 hover:text-black">
                       <MdEmail  className="hover:text-black h-6 w-5"/>
-                      <h1 className="hover:text-black text-gray-400">Messages</h1>
+                      <h1 className="hover:text-black text-start text-gray-400">Messages</h1>
                       </div>
 
-                      <div className="flex justify-center hover:text-black">
+                      <div className="flex justify-center item-center gap-3  hover:text-black">
                       <MdSettings className="hover:text-black h-6 w-6"/>
-                      <h1 className="hover:text-black text-gray-400">Settings</h1> 
+                      <h1 className="hover:text-black text-start h-9 text-gray-400">Settings</h1> 
                       </div>
 
                       <div className="border-b-2 border-gray-200 mx-4">
                      </div> 
 
-                     <div className="flex justify-center hover:text-black">
+                     <div className="flex justify-center item-center gap-1  hover:text-black">
                       <MdPowerSettingsNew className="hover:text-black h-6 w-6"/>
-                      <h1 className="hover:text-black text-gray-400">Logout</h1> 
+                      <h1 className="hover:text-black text-start px-2 space-y-4  text-gray-400">Logout</h1> 
                       </div>
 
                     </div>
@@ -130,7 +160,7 @@ const Sidebar = () => {
           <li>
             <a
               href="/"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group"
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white  dark:hover:bg-gray-700 group"
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Dashboard
@@ -140,21 +170,54 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="/doctor"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+            <button
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
+              onClick={() => handleDoctorDropdownClick()}
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Doctors
               </span>
+              
+                    
+                    <span className="h-5 ml-36 w-5">
+                       {isDoctorDropdownClicked ? "-" : "+" }
+                    </span>
+                 
               <FaUserDoctor className="hover:text-green-600 h-6 w-7" />
               {/*<span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span> */}
-            </a>
+            </button>
+
+            {isDoctorDropdownClicked && (
+                    <div className="text-gray-500 space-y-4 border rounded-md py-4 w-40 px-5 ml-8 h-auto  shadow-xl z-10 ">
+                       <div className=" hover:text-black">
+                      <h1 className="hover:text-green-500 text-gray-600">All Doctors</h1> 
+                      </div>
+
+                      <div className=" hover:text-black">
+                      
+                      <h1 className="hover:text-green-500 text-gray-600">Add Doctors</h1>
+                      </div>
+
+                      <div className=" hover:text-black">
+                      
+                      <h1 className="hover:text-green-500 text-gray-600">Doctors Profile</h1> 
+                      </div>
+ 
+
+                     <div className=" hover:text-black">
+                    
+                      <h1 className="hover:text-green-500 text-gray-600">Doctor Shedule</h1> 
+                      </div>
+
+                    </div>
+
+                 
+                 )}
           </li>
           <li></li>
           <a
             href="#"
-            className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+            className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
           >
             <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
               Appointments
@@ -165,7 +228,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Todo List
@@ -175,33 +238,82 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+            <button
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
+              onClick={() => handlePatientDropdownClick()}
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Patients
               </span>
+              
+                    
+              <span className="h-5 ml-36 w-5">
+                       {isPatientDropdownClicked ? "-" : "+" }
+                    </span>
+                 
+                 
               <CircleUserRound className="hover:text-green-600 h-6 w-7" />
               {/*<span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span> */}
-            </a>
+            </button>
+            {isPatientDropdownClicked && (
+                    <div className="text-gray-500 space-y-4 border rounded-md py-4 w-40 px-4 ml-8 h-auto  shadow-xl z-10 ">
+                       <div className=" hover:text-black">
+                      <h1 className="hover:text-green-500 text-gray-600">All Patient</h1> 
+                      </div>
+
+                      <div className=" hover:text-black">
+                      
+                      <h1 className="hover:text-green-500 text-gray-600">Add Patient</h1>
+                      </div>
+
+                      <div className=" hover:text-black">
+                      
+                      <h1 className="hover:text-green-500 text-gray-600">Patient Profile</h1> 
+                      </div>
+ 
+
+                     <div className=" hover:text-black">
+                    
+                      <h1 className="hover:text-green-500 text-gray-600">Patient</h1> 
+                      </div>
+
+                    </div>
+
+                 
+                 )}
           </li>
           <li>
-            <a
-              href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
-            >
+          <button
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
+              onClick={() => handleRoomDropdownClick()}
+              >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Room Allotment
-              </span>
+              </span> 
+                    <span className="h-5 ml-20 w-5">
+                       {isRoomDropdownClicked ? "-" : "+" }
+                    </span>
+              
               <ThumbsUp className="hover:text-green-600 h-6 w-7" />
               {/*<span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span> */}
-            </a>
+            </button>
+            {isRoomDropdownClicked && (
+                    <div className="text-gray-500 space-y-4 border rounded-md py-4 w-40 items-center ml-8 h-auto  shadow-xl z-10 ">
+                       <div className="flex justify-center hover:text-black">
+                      <h1 className="hover:text-green-500 text-gray-600">Alloted Rooms</h1> 
+                      </div>
+
+                      <div className="flex justify-center hover:text-black">
+                      <h1 className="hover:text-green-500 text-gray-600">Add Allotment</h1> 
+                      </div>
+                    </div>
+                 )}
+            
           </li>
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Departments
@@ -211,16 +323,39 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+            <button
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
+              onClick={() => handlePaymentsDropdownClick()}
             >
               <span className="flex whitespace-nowrap  hover:text-green-500 font-sans">
                 Payments
               </span>
+              
+                    
+                    <span className="h-5 ml-32 w-5">
+                       {isPaymentsDropdownClicked ? "-" : "+" }
+                    </span>
+                 
+              
               <FaCcPaypal className="hover:text-green-600 h-6 w-7" />
               {/*<span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span> */}
-            </a>
+            </button>
+            {isPaymentsDropdownClicked && (
+                    <div className="text-gray-500 space-y-4 border rounded-md py-4 w-40 px-4 ml-8 h-auto  shadow-xl z-10 ">
+                       <div className=" hover:text-black">
+                      <h1 className="hover:text-green-500 text-gray-600">Payements</h1> 
+                      </div>
+
+                      <div className=" hover:text-black">
+                      <h1 className="hover:text-green-500 text-gray-600">Add Payments</h1> 
+                      </div>
+
+                      <div className=" hover:text-black">
+                      <h1 className="hover:text-green-500 text-gray-600">Invoice</h1> 
+                      </div>
+                    </div>
+                 )}
+
           </li>
           <div className="text-start text-gray-500 px-4">
             <p className="mt-12 font-sans">Admin</p>
@@ -228,19 +363,22 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group"
+              className="flex hover:text-green-500  px-4 text-gray-600 rounded-lg dark:text-white  dark:hover:bg-gray-700 group"
             >
-              <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
+              <span className="flex whitespace-nowrap  hover:text-green-500 font-sans">
                 Email
               </span>
-              <MdEmail className="hover:text-green-600 h-6 w-7" />
+              <span className='border-2 ml-2  rounded-md text-gray-400'>
+                12
+              </span>
+              <MdEmail className="hover:text-green-600 ml-[150px] h-6 w-8" />
               {/*<span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span> */}
             </a>
           </li>
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Chat
@@ -252,7 +390,7 @@ const Sidebar = () => {
           <li></li>
           <a
             href="#"
-            className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+            className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
           >
             <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
               Our Staffs
@@ -263,7 +401,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Contacts
@@ -275,7 +413,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 File Manager
@@ -287,7 +425,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="flex items-center justify-between hover:text-green-500 px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center justify-between hover:text-green-500 px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Our Centres
@@ -303,7 +441,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Blog
@@ -315,7 +453,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 "
+              className="flex items-center hover:text-green-500 justify-between px-4 text-gray-600 rounded-lg dark:text-white hover:bg-gray-100 "
             >
               <span className="flex whitespace-nowrap hover:text-green-500 font-sans">
                 Social
@@ -325,6 +463,42 @@ const Sidebar = () => {
             </a>
           </li>
 
+          <li>
+            <a
+            href="#"
+            className='flex gap-16 mt-12 items-start'>
+              <span className='whitespace-nowrap text-gray-500 px-4 mb-4  font-sans'>
+                Traffic this Month
+              </span>
+              <span className='text-gray-400'>
+                  77%
+              </span>
+
+            </a>
+            {/* <div style={{width:"70%"}} className="border-b-2 mt-4 bg-emerald-400 py-px mx-4  ">
+              </div>  */}
+<div className="w-auto mx-4 bg-gray-200 rounded-full  dark:bg-green-600">
+  <div className="bg-green-400 h-[0.5px] rounded-full dark:bg-gray-300" style={{width: "77%"}}></div>
+</div>
+
+          </li>
+          <li>
+            <a
+            href="#"
+            className='flex gap-28 mt-12 items-start'>
+              <span className='flex whitespace-nowrap text-gray-500 px-4  mb-4 font-sans'>
+                Server Load
+              </span>
+              <span className='text-gray-400'>
+                  50%
+              </span>
+            </a>
+            <div className="w-auto mx-4 bg-gray-200 rounded-full  dark:bg-orange-600">
+  <div className="bg-orange-400 h-[0.5px] rounded-full dark:bg-gray-300" style={{width: "50%"}}></div>
+</div> 
+
+
+          </li>
           
         </ul>
       </div>

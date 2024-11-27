@@ -10,12 +10,7 @@ import AppointmentChart from "../components/Appointment";
 
 const Dashboard = () => {
   return (
-    <div className="flex h-auto">
-      <aside className="w-72 h-auto border border-gray-200 shadow-lg bg-white">
-        <div className="p-4">
-          <h2 className="text-lg font-semibold text-gray-700">Sidebar</h2>
-        </div>
-      </aside>
+    
 
       <div className="flex-1 flex flex-col   bg-gray-100">
         <nav className="flex items-center justify-between h-16  bg-white text-gray-800 px-6  shadow-sm rounded-md">
@@ -613,7 +608,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
