@@ -684,7 +684,7 @@ const Dashboard = () => {
                 </div>
               </div>
               <div>
-                <Map />
+                Map global
               </div>
             </div>
             <div className="w-72 h-[400px] border border-gray-200 bg-white ">
