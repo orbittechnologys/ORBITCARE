@@ -14,22 +14,14 @@ import ava3 from "../assets/avatar3.jpg";
 import ava4 from "../assets/avatar4.jpg";
 import { BsFilePdf } from "react-icons/bs";
 import WorldMap from "react-svg-worldmap";
-
 const Dashboard = () => {
-
-  const countryData = [
-    { country: "cn", value: 1389618778 }, // china
+  const data = [
     { country: "in", value: 1311559204 }, // india
     { country: "us", value: 331883986 }, // united states
     { country: "id", value: 264935824 }, // indonesia
-    { country: "pk", value: 210797836 }, // pakistan
-    { country: "br", value: 210301591 }, // brazil
-    { country: "ng", value: 208679114 }, // nigeria
     { country: "bd", value: 161062905 }, // bangladesh
-    { country: "ru", value: 141944641 }, // russia
     { country: "mx", value: 127318112 }, // mexico
   ];
-
   return (
     <div className="flex h-auto ">
       {/* <aside className="w-72 h-auto border border-gray-200 shadow-lg bg-white">
@@ -271,9 +263,9 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="w-full">
+        <div>
           <div className=" flex justify-center items-center  gap-2">
-            <div className="w-[760px] h-auto bg-white border border-gray-100">
+            <div className="w-[760px]  h-auto bg-white border border-gray-100">
               <div className="flex justify-between items-center p-6">
                 <div>
                   <h1 className="text-lg font-normal text-gray-600">
@@ -543,14 +535,14 @@ const Dashboard = () => {
                   <h1 className="">Completed</h1>
                 </div>
                 <div>
-                  <p className="">1,002</p>
+                  <p className="">780</p>
                 </div>
               </div>
               <div className="mb-1 px-4 py-2">
                 <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700 ">
                   <div
-                    className="bg-green-500 h-2.5 rounded-full"
-                    style={{ width: "55%" }}
+                    className="bg-teal-500 h-2.5 rounded-full"
+                    style={{ width: "25%" }}
                   ></div>
                 </div>
               </div>
@@ -566,7 +558,7 @@ const Dashboard = () => {
               <div className="mb-1 px-4 py-2">
                 <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700 ">
                   <div
-                    className="bg-purple-800 h-2.5 rounded-full"
+                    className="bg-yellow-400 h-2.5 rounded-full"
                     style={{ width: "25%" }}
                   ></div>
                 </div>
@@ -698,15 +690,17 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="grid place-items-center">
-      <WorldMap
-        color="red"
-        title="Top 10 Populous Countries"
-        value-suffix="people"
-        size="sm"
-        data={countryData}
-      />
-    </div>
+              <div>
+                <div className="App ml-20">
+                  <WorldMap
+                    color="green"
+                    title="Top 10 Populous Countries"
+                    value-suffix="people"
+                    size="sm"
+                    data={data}
+                  />
+                </div>
+              </div>
             </div>
             <div className="w-72 h-[400px] border border-gray-200 bg-white ">
               <div>
