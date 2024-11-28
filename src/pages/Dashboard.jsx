@@ -7,10 +7,23 @@ import { RiArrowDownSFill } from "react-icons/ri";
 import HospitalRevenue from "../components/HospitalRevenue";
 import PatientChart from "../components/PatientChart";
 import AppointmentChart from "../components/Appointment";
+import DeathAndRecovery from "../components/DeathAndRecovery";
+import ava1 from "../assets/avatar1.jpg";
+import ava2 from "../assets/avatar2.jpg";
+import ava3 from "../assets/avatar3.jpg";
+import ava4 from "../assets/avatar4.jpg";
+import { BsFilePdf } from "react-icons/bs";
 
 const Dashboard = () => {
   return (
+
     
+    <div className="flex h-auto ">
+      {/* <aside className="w-72 h-auto border border-gray-200 shadow-lg bg-white">
+        <div className="p-4">
+          <h2 className="text-lg font-semibold text-gray-700">Sidebar</h2>
+        </div>
+      </aside> */}
 
       <div className="flex-1 flex flex-col   bg-gray-100">
         <nav className="flex items-center justify-between h-16  bg-white text-gray-800 px-6  shadow-sm rounded-md">
@@ -603,10 +616,822 @@ const Dashboard = () => {
                     </div>
                   </div>
                 </div>
+                <div>
+                  <DeathAndRecovery />
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div>
+          <div className="flex justify-center items-center gap-2 p-6">
+            <div className="w-[460px] h-[400px] border border-gray-200 bg-white ">
+              <div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h1 className="p-6 font-medium text-lg text-gray-600">
+                      Organic Visits & Conversions{" "}
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="flex justify-center items-center gap-4 p-6">
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/5049/5049903.png"
+                          className="w-4 h-4"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/128/512/512142.png"
+                          className="w-4 h-4"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  {" "}
+                  <div className="flex justify-between items-center p-6">
+                    <div className="flex justify-center items-center gap-5">
+                      <div>
+                        <h1 className="text-xl font-medium text-gray-600">
+                          ₹356{" "}
+                        </h1>
+                        <p className="text-gray-500 text-xs">Rate</p>
+                      </div>
+                      <div>
+                        <h1 className="text-xl font-medium text-gray-600">
+                          ₹198{" "}
+                        </h1>
+                        <p className="text-gray-500 text-xs">Value</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <div className="flex justify-center items-center">
+                          <div className=" w-12 h-8 px-2.5 py-1 border border-gray-200 bg-white hover:bg-gray-100 text-gray-700">
+                            <p>Day</p>
+                          </div>
+                          <div className=" w-14 h-8 px-2.5 py-1 border border-gray-200 bg-white hover:bg-gray-100 text-gray-700">
+                            <p>Week</p>
+                          </div>
+                          <div className=" w-16 h-8 px-2.5 py-1 border border-gray-200 bg-lime-500 hover:bg-gray-100 text-gray-700">
+                            <p>Month</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                Map global
+              </div>
+            </div>
+            <div className="w-72 h-[400px] border border-gray-200 bg-white ">
+              <div>
+                <h1 className="p-6 font-medium text-lg text-gray-600">
+                  Overall Hospital Rating{" "}
+                </h1>
+              </div>
+              <div className="flex justify-center items-center mr-24">
+                <div>
+                  <h1 className="font-semibold text-3xl text-gray-600 px-1">
+                    {" "}
+                    4.3
+                  </h1>
+                </div>
+                <div>
+                  <div className="flex items-center mt-2">
+                    <svg
+                      className="w-4 h-4 text-gray-500 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg
+                      className="w-4 h-4 text-gray-500 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg
+                      className="w-4 h-4 text-gray-500 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg
+                      className="w-4 h-4 text-gray-500 ms-1"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                    <svg
+                      className="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="flex mt-2 ml-5">
+                  <div>
+                    <img src={ava1} className="w-7 h-7 rounded-full" />
+                  </div>
+                  <div style={{ marginLeft: "-12px" }}>
+                    <img src={ava2} className="w-7 h-7 rounded-full" />
+                  </div>
+                  <div style={{ marginLeft: "-12px" }}>
+                    <img src={ava3} className="w-7 h-7 rounded-full" />
+                  </div>
+                  <div style={{ marginLeft: "-12px" }}>
+                    <img src={ava4} className="w-7 h-7 rounded-full" />
+                  </div>
+                </div>
+              </div>
+              <div className="px-4 py-2">
+                <div className="flex justify-between items-center p-2 w-full border-b-[1px]">
+                  <div>
+                    <div className="flex justify-center items-end ">
+                      <div>
+                        <h1 className="text-xs font-normal text-gray-600">
+                          5.0
+                        </h1>
+                      </div>
+                      <div>
+                        {" "}
+                        <div className="flex ml-2 text-gray-500">
+                          {[...Array(5)].map((_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                              width="14"
+                              height="14"
+                              className="mr-0"
+                            >
+                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
+                    <div>
+                      {" "}
+                      <h1 className="font-medium text-base text-gray-600">
+                        4,158
+                      </h1>
+                    </div>
+                    <h4 className="font-normal text-xs text-gray-600 mt-1">
+                      58%
+                    </h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="px-4 ">
+                <div className="flex justify-between items-center p-2 w-full border-b-[1px]">
+                  <div>
+                    <div className="flex justify-center items-end ">
+                      <div>
+                        <h1 className="text-xs font-normal text-gray-600">
+                          4.0
+                        </h1>
+                      </div>
+                      <div>
+                        {" "}
+                        <div className="flex ml-2 text-gray-500">
+                          {[...Array(5)].map((_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill={index < 4 ? "currentColor" : "none"}
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              width="14"
+                              height="14"
+                              className=""
+                            >
+                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
+                    <div>
+                      {" "}
+                      <h1 className="font-medium text-base text-gray-600">
+                        2,019
+                      </h1>
+                    </div>
+                    <h4 className="font-normal text-xs text-gray-600 mt-1">
+                      28%
+                    </h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="px-4 ">
+                <div className="flex justify-between items-center p-2 w-full border-b-[1px]">
+                  <div>
+                    <div className="flex justify-center items-end ">
+                      <div>
+                        <h1 className="text-xs font-normal text-gray-600">
+                          3.0
+                        </h1>
+                      </div>
+                      <div>
+                        {" "}
+                        <div className="flex ml-2 text-gray-500">
+                          {[...Array(5)].map((_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill={index < 3 ? "currentColor" : "none"}
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              width="14"
+                              height="14"
+                              className=""
+                            >
+                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
+                    <div>
+                      {" "}
+                      <h1 className="font-medium text-base text-gray-600">
+                        984
+                      </h1>
+                    </div>
+                    <h4 className="font-normal text-xs text-gray-600 mt-1">
+                      15%
+                    </h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="px-4 ">
+                <div className="flex justify-between items-center p-2 w-full border-b-[1px]">
+                  <div>
+                    <div className="flex justify-center items-end ">
+                      <div>
+                        <h1 className="text-xs font-normal text-gray-600">
+                          2.0
+                        </h1>
+                      </div>
+                      <div>
+                        {" "}
+                        <div className="flex ml-2 text-gray-500">
+                          {[...Array(5)].map((_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill={index < 2 ? "currentColor" : "none"}
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              width="14"
+                              height="14"
+                              className=""
+                            >
+                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
+                    <div>
+                      {" "}
+                      <h1 className="font-medium text-base text-gray-600">
+                        4,30
+                      </h1>
+                    </div>
+                    <h4 className="font-normal text-xs text-gray-600 mt-1">
+                      8%
+                    </h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="px-4 ">
+                <div className="flex justify-between items-center p-2">
+                  <div>
+                    <div className="flex justify-center items-end ">
+                      <div>
+                        <h1 className="text-xs font-normal text-gray-600">
+                          1.0
+                        </h1>
+                      </div>
+                      <div>
+                        {" "}
+                        <div className="flex ml-2 text-gray-500">
+                          {[...Array(5)].map((_, index) => (
+                            <svg
+                              key={index}
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill={index < 1 ? "currentColor" : "none"}
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              width="14"
+                              height="14"
+                              className=""
+                            >
+                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
+                    <div>
+                      {" "}
+                      <h1 className="font-medium text-base text-gray-600">
+                        307
+                      </h1>
+                    </div>
+                    <h4 className="font-normal text-xs text-gray-600 mt-1">
+                      18%
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-[400px] h-[400px] border border-gray-200 bg-white">
+              <div>
+                <h1 className="p-6 font-medium text-lg text-gray-600">
+                  Users Overview{" "}
+                </h1>
+              </div>
+              <div className="">
+                <div className="flex justify-evenly items-center mr-36 ">
+                  <div>
+                    <p className="font-normal text-sm text-gray-600">
+                      New patient
+                    </p>
+                    <h1 className="font-bold text-xl text-gray-600">2,025</h1>
+                  </div>
+                  <div className="border-s p-2 ">
+                    <p className="font-normal text-sm text-gray-600">
+                      {" "}
+                      Return patient
+                    </p>
+                    <h1 className="font-bold text-xl text-gray-600">1,254</h1>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 mt-2 mx-5"></div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center px-6  mt-4">
+                  <div>
+                    <div className="flex justify-between">
+                      <div className="mb-1 text-base font-normal text-gray-400">
+                        New Patient
+                      </div>
+                      <div>
+                        <h1 className="mb-1 text-base font-medium text-gray-400">
+                          {" "}
+                          77%
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div className="w-[350px] bg-gray-200 rounded-full h-0.5 mb-4 dark:bg-gray-700 ">
+                      <div
+                        className="bg-lime-500 h-0.5 rounded-full"
+                        style={{ width: "77%" }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-center px-6 ">
+                  <div>
+                    <div className="flex justify-between">
+                      <div className="mb-1 text-base font-normal text-gray-400">
+                        Return Patient
+                      </div>
+                      <div>
+                        <h1 className="mb-1 text-base font-medium text-gray-400">
+                          {" "}
+                          50%
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div className="w-[350px] bg-gray-200 rounded-full h-0.5 mb-4 dark:bg-gray-700 ">
+                      <div
+                        className="bg-red-500 h-0.5 rounded-full"
+                        style={{ width: "50%" }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-center px-6">
+                  <div>
+                    <div className="flex justify-between">
+                      <div className="mb-1 text-base font-normal text-gray-400">
+                        Engagement
+                      </div>
+                      <div>
+                        <h1 className="mb-1 text-base font-medium text-gray-400">
+                          {" "}
+                          23%
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div className="w-[350px] bg-gray-200 rounded-full h-0.5 mb-4 dark:bg-gray-700 ">
+                      <div
+                        className="bg-blue-500 h-0.5 rounded-full"
+                        style={{ width: "23%" }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p className="text-gray-500 font-normal text-sm px-6 py-4">
+                  The total number of Page Impressions within the date range
+                  <span className="text-blue-500 cursor-pointer">
+                    View more
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div className="flex justify-between items-center p-6">
+              <div>
+                <h1 className="text-xl font-bold text-gray-800">
+                  Upcoming Operations List
+                </h1>
+                <p className="text-gray-500">
+                  Statistics, Predictive Analytics Data Visualization, Big Data
+                  Analytics, etc.
+                </p>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <select className="p-2 border border-gray-200">
+                  <option>15 Aug 2020</option>
+                  <option>Today's</option>
+                  <option>This Week</option>
+                  <option>Last Week</option>
+                  <option>This Month</option>
+                  <option>Last Month</option>
+                  <option>Last 12 Month</option>
+                  <option>Custom Date</option>
+                </select>
+                <div className=" w-28 p-2 border border-gray-200 bg-white hover:bg-gray-100 text-gray-700">
+                  <div className="flex justify-center items-center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/10550/10550076.png"
+                      className="w-5 h-5"
+                    />
+                    <p>report</p>
+                  </div>
+                </div>
+                <div className=" w-28 p-2 border border-gray-200 bg-white hover:bg-gray-100 text-gray-700">
+                  <div className="flex justify-center items-center">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/482/482216.png"
+                      className="w-6 h-5"
+                    />
+                    <p>export</p>
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+          </div>
+          <div className=" p-6">
+            <div className="w-full h-[500px] bg-white border border-gray-100">
+              <div>
+                <div className="grid grid-cols-6 place-content-center items-center">
+                  <div className="ml-5">
+                    <p className="font-bold text-base px-5 text-gray-700">#</p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-base p-6 text-gray-700 w-64">
+                      Patient Name
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-base p-10 text-gray-700 w-60">
+                      Doctors Team
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-base p-5 text-gray-700 w-64">
+                      Doctor Of Operation
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-base px-10 py-10 text-gray-700">
+                      Report
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-base  text-gray-700">
+                      Diseases
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="hover:bg-gray-100 py-3">
+                <div className="grid grid-cols-6 place-content-center place-items-center">
+                  <div className="mr-20">
+                    <h1 className=" text-sm font-medium text-gray-500">
+                      B-865
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="flex justify-center items-center gap-2">
+                      <div>
+                        <img src={ava2} className="w-10 h-10 rounded-full" />
+                      </div>
+                      <div>
+                        <h1 className="font-semibold text-lg text-gray-500">
+                          Michelle Schultz
+                        </h1>
+                        <p className="font-normal text-sm text-gray-500">
+                          + 264-625-5858
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mr-10">
+                    <div className="flex justify-center items-center">
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava1} className="w-8 h-8 rounded-full" />
+                      </div>
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava2} className="w-8 h-8 rounded-full" />
+                      </div>
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava3} className="w-8 h-8 rounded-full" />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="font-medium text-base text-gray-500 mr-16">
+                      15-08-2020
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="px-10">
+                      <BsFilePdf color="red" className="w-5 h-5 mr-20" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-normal text-sm text-gray-500 mr-32">
+                      Fracture
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hover:bg-gray-100 py-3">
+                <div className="grid grid-cols-6 place-content-center place-items-center">
+                  <div className="mr-20">
+                    <h1 className=" text-sm font-medium text-gray-500">
+                      B-231
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="flex justify-center items-center gap-2 mr-5">
+                      <div>
+                        <img src={ava1} className="w-10 h-10 rounded-full" />
+                      </div>
+                      <div>
+                        <h1 className="font-semibold text-lg text-gray-500">
+                          Deborah Cox{" "}
+                        </h1>
+                        <p className="font-normal text-sm text-gray-500">
+                          + 264-625-1818
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mr-14">
+                    <div className="flex justify-center items-center">
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava2} className="w-8 h-8 rounded-full" />
+                      </div>
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava3} className="w-8 h-8 rounded-full" />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="font-medium text-base text-gray-500 mr-16">
+                      15-08-2020
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="px-10">
+                      <BsFilePdf color="red" className="w-5 h-5 mr-20" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-normal text-sm text-gray-500 mr-32 w-40 ml-24">
+                      Cataract surgery
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hover:bg-gray-100 py-3">
+                <div className="grid grid-cols-6 place-content-center place-items-center">
+                  <div className="mr-20">
+                    <h1 className=" text-sm font-medium text-gray-500">
+                      B-781
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="flex justify-center items-center gap-2 mr-5">
+                      <div>
+                        <img src={ava3} className="w-10 h-10 rounded-full" />
+                      </div>
+                      <div>
+                        <h1 className="font-semibold text-lg text-gray-500">
+                          Denise Elliott{" "}
+                        </h1>
+                        <p className="font-normal text-sm text-gray-500">
+                          + 264-625-2323{" "}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mr-20">
+                    <div className="flex justify-start items-start">
+                      <div style={{ marginLeft: "" }}>
+                        <img src={ava4} className="w-8 h-8 rounded-full" />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="font-medium text-base text-gray-500 mr-16">
+                      15-08-2020
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="px-10">
+                      <BsFilePdf color="red" className="w-5 h-5 mr-20" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-normal text-sm text-gray-500 mr-32 w-40 ml-24">
+                      Hysterectomy
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hover:bg-gray-100 py-3">
+                <div className="grid grid-cols-6 place-content-center place-items-center">
+                  <div className="mr-20">
+                    <h1 className=" text-sm font-medium text-gray-500">
+                      B-865
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="flex justify-center items-center gap-2 mr-5">
+                      <div>
+                        <img src={ava4} className="w-10 h-10 rounded-full " />
+                      </div>
+                      <div>
+                        <h1 className="font-semibold text-lg text-gray-500">
+                          Rose Coke{" "}
+                        </h1>
+                        <p className="font-normal text-sm text-gray-500">
+                          + 264-625-8743{" "}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mr-10">
+                    <div className="flex justify-center items-center">
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava1} className="w-8 h-8 rounded-full" />
+                      </div>
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava2} className="w-8 h-8 rounded-full" />
+                      </div>
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava3} className="w-8 h-8 rounded-full" />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="font-medium text-base text-gray-500 mr-16">
+                      15-08-2020
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="px-10">
+                      <BsFilePdf color="red" className="w-5 h-5 mr-20" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-normal text-sm text-gray-500 mr-32">
+                      Cancer
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hover:bg-gray-100 py-3">
+                <div className="grid grid-cols-6 place-content-center place-items-center">
+                  <div className="mr-20">
+                    <h1 className=" text-sm font-medium text-gray-500">
+                      B-231
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="flex justify-center items-center gap-2 mr-5">
+                      <div>
+                        <img src={ava2} className="w-10 h-10 rounded-full" />
+                      </div>
+                      <div>
+                        <h1 className="font-semibold text-lg text-gray-500">
+                          Terry Carter{" "}
+                        </h1>
+                        <p className="font-normal text-sm text-gray-500">
+                          + 264-625-1234
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mr-14">
+                    <div className="flex justify-center items-center">
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava2} className="w-8 h-8 rounded-full" />
+                      </div>
+                      <div style={{ marginLeft: "-16px" }}>
+                        <img src={ava3} className="w-8 h-8 rounded-full" />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="font-medium text-base text-gray-500 mr-16">
+                      15-08-2020
+                    </h1>
+                  </div>
+                  <div>
+                    <div className="px-10">
+                      <BsFilePdf color="red" className="w-5 h-5 mr-20" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-normal text-sm text-gray-500 mr-32 w-40 ml-24">
+                      Cataract surgery
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     
   );

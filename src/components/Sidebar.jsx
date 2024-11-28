@@ -63,7 +63,7 @@ const Sidebar = () => {
 
 
   return (
-    <div>
+    <div className='w-full'>
     <button
       data-drawer-target="logo-sidebar"
       data-drawer-toggle="logo-sidebar"
