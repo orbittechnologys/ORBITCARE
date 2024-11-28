@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import Doctors from './pages/Doctors';
+import Exp from './components/Exp';
 
 function App() {
   
@@ -13,7 +14,7 @@ function App() {
     <Router>
       <Routes>
         
-        <Route element={<Layout/>}>
+        <Route element={<Exp/>}>
             <Route path='/' element={<Dashboard/>}/>
             <Route path='/doctor' element={<Doctors/>}/>
             <Route path='/appointment' element={<h1>Appointment page</h1>}/>

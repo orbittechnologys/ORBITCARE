@@ -13,8 +13,23 @@ import ava2 from "../assets/avatar2.jpg";
 import ava3 from "../assets/avatar3.jpg";
 import ava4 from "../assets/avatar4.jpg";
 import { BsFilePdf } from "react-icons/bs";
+import WorldMap from "react-svg-worldmap";
 
 const Dashboard = () => {
+
+  const countryData = [
+    { country: "cn", value: 1389618778 }, // china
+    { country: "in", value: 1311559204 }, // india
+    { country: "us", value: 331883986 }, // united states
+    { country: "id", value: 264935824 }, // indonesia
+    { country: "pk", value: 210797836 }, // pakistan
+    { country: "br", value: 210301591 }, // brazil
+    { country: "ng", value: 208679114 }, // nigeria
+    { country: "bd", value: 161062905 }, // bangladesh
+    { country: "ru", value: 141944641 }, // russia
+    { country: "mx", value: 127318112 }, // mexico
+  ];
+
   return (
     <div className="flex h-auto ">
       {/* <aside className="w-72 h-auto border border-gray-200 shadow-lg bg-white">
@@ -256,7 +271,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div>
+        <div className="w-full">
           <div className=" flex justify-center items-center  gap-2">
             <div className="w-[760px] h-auto bg-white border border-gray-100">
               <div className="flex justify-between items-center p-6">
@@ -683,9 +698,15 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div>
-                Map global
-              </div>
+              <div className="grid place-items-center">
+      <WorldMap
+        color="red"
+        title="Top 10 Populous Countries"
+        value-suffix="people"
+        size="sm"
+        data={countryData}
+      />
+    </div>
             </div>
             <div className="w-72 h-[400px] border border-gray-200 bg-white ">
               <div>

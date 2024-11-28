@@ -5,10 +5,10 @@ import { Outlet } from 'react-router-dom'
 const Layout = () => {
   return (
     <div className='flex w-screen'>
-        <div className='basis-1/4'>
+        <div className='basis-1/5'>
             <Sidebar/>
         </div>
-        <div className='basis-3/4'>
+        <div className='basis-4/5'>
             <Outlet/>
         </div>
     </div>
@@ -16,3 +16,5 @@ const Layout = () => {
 }
 
 export default Layout
+
+
