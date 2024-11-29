@@ -65,29 +65,32 @@ function AddDoctor() {
             </div>
           </nav>
           <div>
-            <div className="flex justify-between items-center p-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-6 gap-4 md:gap-0">
               <div>
-                <h1 className="text-2xl font-medium text-gray-800">
+                <h1 className="text-lg md:text-2xl font-medium text-gray-800">
                   Hi, Welcome back!
                 </h1>
-                <p className="text-gray-500">JustDo Dashboard</p>
+                <p className="text-gray-500 text-sm md:text-base">
+                  JustDo Dashboard
+                </p>
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-16 h-8 bg-black text-white text-sm "
+                  className="w-full md:w-16 h-10 bg-black text-white text-sm rounded-sm"
                 >
                   Submit
                 </button>
               </div>
             </div>
           </div>
+
           <div className="px-6">
             <div className="w-full h-auto bg-white">
               <div>
-                <div className="grid grid-cols-2 place-content-center place-items-center py-6">
-                  <div className="">
-                    <div className=" w-[550px] h-20 border border-gray-200">
+                <div className="grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center py-6 gap-4">
+                  <div>
+                    <div className="w-full md:w-[550px] h-20 border border-gray-200">
                       <div>
                         <label
                           htmlFor="first_name"
@@ -102,8 +105,8 @@ function AddDoctor() {
                       </div>
                     </div>
                   </div>
-                  <div className="px-8">
-                    <div className="w-[550px] h-20 border border-gray-200">
+                  <div className="md:px-8">
+                    <div className="w-full md:w-[550px] h-20 border border-gray-200">
                       <div>
                         <label
                           htmlFor="last_name"
@@ -121,73 +124,68 @@ function AddDoctor() {
                 </div>
               </div>
               <div>
-                <div>
-                  <div className="grid grid-cols-2">
-                    <div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="px-5">
-                          <div className="w-[270px] h-[90px] border border-gray-200 ">
-                            <label
-                              htmlFor="date"
-                              className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
-                            >
-                              Date of Birth
-                            </label>
-                            <input
-                              type="date"
-                              className="w-full h-10 px-2 focus:outline-none border-0"
-                            ></input>
-                          </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="px-5">
+                        <div className="w-full md:w-[270px] h-[90px] border border-gray-200">
+                          <label
+                            htmlFor="date"
+                            className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
+                          >
+                            Date of Birth
+                          </label>
+                          <input
+                            type="date"
+                            className="w-full h-10 px-2 focus:outline-none border-0"
+                          ></input>
                         </div>
-                        <div className="">
-                          <div className="w-[270px] h-[90px] border border-gray-200 ">
-                            <label
-                              htmlFor="Gender"
-                              className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
-                            >
-                              Gender{" "}
-                            </label>
-                            <select className="p-4 w-full text-lime-500  focus:outline-none ">
-                              <option className="text-lime-500">
-                                -Gender-
-                              </option>
-                              <option className="text-lime-500">Male</option>
-                              <option className="text-lime-500">Female</option>
-                            </select>
-                          </div>
+                      </div>
+                      <div>
+                        <div className="w-full md:w-[270px] h-[90px] border border-gray-200">
+                          <label
+                            htmlFor="Gender"
+                            className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
+                          >
+                            Gender
+                          </label>
+                          <select className="p-4 w-full text-lime-500 focus:outline-none">
+                            <option className="text-lime-500">-Gender-</option>
+                            <option className="text-lime-500">Male</option>
+                            <option className="text-lime-500">Female</option>
+                          </select>
                         </div>
                       </div>
                     </div>
-
-                    <div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="px-5">
-                          <div className="w-[270px] h-[90px] border border-gray-200 ">
-                            <label
-                              htmlFor="speciality"
-                              className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
-                            >
-                              Speciality{" "}
-                            </label>
-                            <input
-                              type="text"
-                              className="w-full h-10 p-2 focus:outline-none border-0"
-                            ></input>
-                          </div>
+                  </div>
+                  <div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="px-5">
+                        <div className="w-full md:w-[270px] h-[90px] border border-gray-200">
+                          <label
+                            htmlFor="speciality"
+                            className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
+                          >
+                            Speciality
+                          </label>
+                          <input
+                            type="text"
+                            className="w-full h-10 p-2 focus:outline-none border-0"
+                          ></input>
                         </div>
-                        <div className="">
-                          <div className="w-[270px] h-[90px] border border-gray-200 ">
-                            <label
-                              htmlFor="Gender"
-                              className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
-                            >
-                              Phone{" "}
-                            </label>
-                            <input
-                              type="number"
-                              className="w-full h-10 p-2 focus:outline-none border-0"
-                            ></input>
-                          </div>
+                      </div>
+                      <div>
+                        <div className="w-full md:w-[270px] h-[90px] border border-gray-200">
+                          <label
+                            htmlFor="Gender"
+                            className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
+                          >
+                            Phone
+                          </label>
+                          <input
+                            type="number"
+                            className="w-full h-10 p-2 focus:outline-none border-0"
+                          ></input>
                         </div>
                       </div>
                     </div>
@@ -195,15 +193,15 @@ function AddDoctor() {
                 </div>
               </div>
               <div>
-                <div className="grid grid-cols-2 place-content-center place-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center gap-4">
                   <div className="py-4">
-                    <div className=" w-[550px] h-20 border border-gray-200">
+                    <div className="w-full md:w-[550px] h-20 border border-gray-200">
                       <div>
                         <label
                           htmlFor="first_name"
                           className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
                         >
-                          Enter your Email{" "}
+                          Enter your Email
                         </label>
                         <input
                           type="email"
@@ -212,14 +210,14 @@ function AddDoctor() {
                       </div>
                     </div>
                   </div>
-                  <div className="px-8">
-                    <div className="w-[550px] h-20 border border-gray-200">
+                  <div className="md:px-8">
+                    <div className="w-full md:w-[550px] h-20 border border-gray-200">
                       <div>
                         <label
                           htmlFor="last_name"
                           className="block p-2 text-sm font-medium text-gray-500 dark:text-white"
                         >
-                          Website URL{" "}
+                          Website URL
                         </label>
                         <input
                           type="text"
@@ -234,7 +232,7 @@ function AddDoctor() {
                 <div className="flex items-center justify-center w-full px-5">
                   <label
                     htmlFor="dropzone-file"
-                    className="flex flex-col items-center justify-center w-full h-64 border border-gray-200  rounded-md cursor-pointer bg-gray-50  dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                    className="flex flex-col items-center justify-center w-full h-64 border border-gray-200 rounded-md cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
                   >
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       <svg
@@ -246,9 +244,9 @@ function AddDoctor() {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                         />
                       </svg>
@@ -269,7 +267,7 @@ function AddDoctor() {
                 ></textarea>
               </div>
               <div>
-                <div className="flex justify-start items-start gap-2 px-6 py-4">
+                <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-2 px-6 py-4">
                   <div>
                     <button
                       type="button"
@@ -290,6 +288,7 @@ function AddDoctor() {
               </div>
             </div>
           </div>
+
           <div className="px-6 py-3">
             <div className="h-auto w-full bg-white">
               <div>
